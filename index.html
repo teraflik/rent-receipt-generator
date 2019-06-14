@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Rent Receipt Generator</title>
+</head>
+
+<body>
+  <main class="container" id="main">
+    <header>
+      <h1>Rent Receipt Generator</h1>
+    </header>
+    <form name="receiptForm" class="needs-validation" novalidate>
+
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label>Monthly Rent</label>
+          <input type="number" class="form-control" name="monthlyRent" placeholder="Monthly Rent" required>
+          <div class="invalid-feedback">
+            Please provide a valid amount.
+          </div>
+        </div>
+        <div class="col-md-8 mb-3">
+          <label>House Address</label>
+          <input type="text" class="form-control" name="houseAddress" placeholder="House Address" required>
+          <div class="invalid-feedback">
+              Please provide the house address.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label>Tenant’s name</label>
+          <input type="text" class="form-control" name="tenantName" placeholder="Tenant’s name" required>
+          <div class="invalid-feedback">
+              Please provide the tenant's name.
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Owner’s name</label>
+          <input type="text" class="form-control" name="ownerName" placeholder="Owner's Name" required>
+          <div class="invalid-feedback">
+              Please provide the owner's name.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label>Owner’s PAN</label>
+          <input type="text" class="form-control" name="ownerPAN" aria-describedby="ownerPANHelp" placeholder="PAN Number">
+          <small id="ownerPANHelp" class="form-text text-muted">PAN number is mandatory only if the total rent exceeds Rs. 1 lakh.</small>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label>Occupancy start</label>
+          <input type="date" class="form-control" name="occupancyStart" required>
+          <div class="invalid-feedback">
+            Please provide a valid date.
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label>Occupancy end</label>
+          <input type="date" class="form-control" name="occupancyEnd" required>
+          <div class="invalid-feedback">
+            Please provide a valid date.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+
+</html>
